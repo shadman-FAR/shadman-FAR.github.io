@@ -363,7 +363,7 @@
                             </div>
                             <div>
                                 <p class="font-semibold">Phone</p>
-                                <p class="opacity-90">+91 XXXXX XXXXX</p>
+                                <p class="opacity-90">+91 7276074922</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
@@ -397,18 +397,18 @@
                 </div>
                 
                 <div class="fade-in">
-                    <form class="bg-white/10 rounded-2xl p-8 backdrop-blur-sm" id="contact-form">
+                    <form class="bg-white/10 rounded-2xl p-8 backdrop-blur-sm" action="https://formspree.io/f/xeozzbzk" method="POST" id="contact-form">
                         <div class="mb-6">
                             <label class="block text-sm font-semibold mb-2">Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-coral" placeholder="Your Name" required>
+                            <input type="text" name="name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-coral" placeholder="Your Name" required>
                         </div>
                         <div class="mb-6">
                             <label class="block text-sm font-semibold mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-coral" placeholder="your.email@example.com" required>
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-coral" placeholder="your.email@example.com" required>
                         </div>
                         <div class="mb-6">
                             <label class="block text-sm font-semibold mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-coral resize-none" placeholder="Tell me about your project..." required></textarea>
+                            <textarea rows="4" name="message" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-coral resize-none" placeholder="Tell me about your project..." required></textarea>
                         </div>
                         <button type="submit" class="w-full bg-coral hover:bg-coral/80 text-white font-semibold py-3 rounded-lg transition-colors">
                             Send Message
@@ -498,21 +498,12 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Contact form submission
+        // Contact form submission - Let Formspree handle it naturally
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show success message
+            // Let the form submit naturally to Formspree
             const button = this.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-            button.textContent = 'Message Sent! ✓';
-            button.style.backgroundColor = '#10b981';
-            
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.style.backgroundColor = '';
-                this.reset();
-            }, 3000);
+            button.textContent = 'Sending...';
+            button.disabled = true;
         });
 
         // Smooth scrolling for navigation links
@@ -544,5 +535,5 @@
             animateSkillBars();
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9684c9ad22260690',t:'MTc1NDA0NTU2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9684f55590af7ef1',t:'MTc1NDA0NzM1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
